@@ -32,14 +32,16 @@ public class Customer {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
+//---------------------------------------------------------------------------------
 	public String getSurname() {
 		return surname;
 	}
+	//---------------------------------------------------------------------------------
 
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
+	//---------------------------------------------------------------------------------
 
 	@Override
 	public String toString() {
@@ -55,6 +57,7 @@ public class Customer {
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
 		return result;
 	}
+	//---------------------------------------------------------------------------------
 
 	@Override
 	public boolean equals(Object obj) {

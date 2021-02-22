@@ -1,4 +1,4 @@
-package com.qa.ims.controllers;
+//package com.qa.ims.controllers;
 
 import static org.junit.Assert.assertEquals;
 
