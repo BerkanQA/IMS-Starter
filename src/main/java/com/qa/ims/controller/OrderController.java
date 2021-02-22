@@ -1,5 +1,11 @@
 package com.qa.ims.controller;
 
-public class OrderController {
+
+import com.qa.ims.persistence.dao.OrderDAO;
+import com.qa.ims.persistence.domain.Order;
+
+public class OrderController implements CrudController<Order> {
+	
+	
 
 }

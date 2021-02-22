@@ -5,14 +5,19 @@ public class Order {
 		private Long orderID;
 		private Long customerID;
 		private Long itemID;
-		public int quantity;
+		public Long quantity;
 
-		public Order(int quantity) {
+		public Order(Long quantity) {
 			this.setQuantity(quantity);
 			
 		}
 		
-		public Order(Long orderID, Long customerID, Long itemID, int quantity) {
+		private void setQuantity(Long quantity2) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public Order(Long orderID, Long customerID, Long itemID, Long quantity) {
 			this.setOrderID(orderID);
 			this.setCustomerID(customerID);
 			this.setItemID(itemID);
