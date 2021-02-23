@@ -27,7 +27,7 @@ public class ItemController implements CrudController<Item> {
 	}
 
 	/**
-	 * Reads all customers to the logger
+	 * Reads all the items to the logger
 	 */
 	@Override
 	public List<Item> readAll() {
