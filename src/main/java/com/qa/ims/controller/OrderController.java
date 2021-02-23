@@ -32,7 +32,7 @@ public class OrderController implements CrudController<Order> {
 		return orders;
 	}
 
-	
+	//Creates an order by taking user input 
 	@Override
 	public Order create() {
 		LOGGER.info("Please enter an Order ID ");
