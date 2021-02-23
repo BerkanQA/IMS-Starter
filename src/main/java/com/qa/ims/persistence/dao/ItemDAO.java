@@ -21,7 +21,7 @@ public class ItemDAO implements Dao<Item> {
 	@Override
 	public Item modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long itemId = resultSet.getLong("id");
-		String itemName = resultSet.getString("first_name");
+		String itemName = resultSet.getString("name");
 		float itemPrice = resultSet.getFloat("price");
 		return new Item(itemId, itemName, itemPrice);
 	}
