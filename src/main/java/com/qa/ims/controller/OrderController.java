@@ -23,7 +23,7 @@ public class OrderController implements CrudController<Order> {
 		this.orderDAO = orderDAO;
 		this.utils = utils;
 	}
-	
+	// view all the orders
 	@Override
 	public List<Order> readAll(){
 		List<Order> orders = orderDAO.readAll();
@@ -48,7 +48,21 @@ public class OrderController implements CrudController<Order> {
 		return order;
 	}
 
-	//delete an order by taking user input
+	@Override
+	public Order update() {
+		LOGGER.info("Please entere the order ID you would like to update");
+		Long orderID = utils.getLong();
+		LOGGER.info("Please entere the customer ID you would like to update");
+		Long customerID = utils.getLong();
+		LOGGER.info("Please entere the item ID you would like to update");
+		Long itemID = utils.getLong();
+		LOGGER.info("Please entere the quantity you would like to update");
+		Long quantity = utils.getLong();
+		
+		Order order = orderDAO.update(new Order(orderID, customerID, itemID, quantity));
+		LOGGER.info("Orders Updated");
+		return order;
+	}
 	
 	@Override
 	public int delete() {
