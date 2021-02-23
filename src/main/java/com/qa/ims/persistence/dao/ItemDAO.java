@@ -22,14 +22,14 @@ public class ItemDAO implements Dao<Item> {
 	public Item modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long itemId = resultSet.getLong("id");
 		String itemName = resultSet.getString("name");
-		float itemPrice = resultSet.getFloat("price");
+		Double itemPrice = resultSet.getDouble("price");
 		return new Item(itemId, itemName, itemPrice);
 	}
 
 	/**
 	 * Reads all customers from the database
 	 * 
-	 * @return A list of customers
+	 * @return A list of Items
 	 */
 	@Override
 	public List<Item> readAll() {
@@ -62,17 +62,17 @@ public class ItemDAO implements Dao<Item> {
 	}
 
 	/**
-	 * Creates a customer in the database
+	 * Creates a Item in the database
 	 * 
-	 * @param customer - takes in a customer object. id will be ignored
+	 * @param item - takes in a item object. id will be ignored
 	 */
 	@Override
 	public Item create(Item item) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO customers(name, price) VALUES (?, ?)");) {
+						.prepareStatement("INSERT INTO items(name, price) VALUES (?, ?)");) {
 			statement.setString(1, item.getItemName());
-			statement.setFloat(2, item.getItemPrice());
+			statement.setDouble(2, item.getItemPrice());
 			statement.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
@@ -111,7 +111,7 @@ public class ItemDAO implements Dao<Item> {
 				PreparedStatement statement = connection
 						.prepareStatement("UPDATE items SET first_name = ?, surname = ? WHERE id = ?");) {
 			statement.setString(1, item.getItemName());
-			statement.setFloat(2, item.getItemPrice());
+			statement.setDouble(2, item.getItemPrice());
 			statement.setLong(3, item.getItemId());
 			statement.executeUpdate();
 			return read(item.getItemId());
