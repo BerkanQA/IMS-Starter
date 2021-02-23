@@ -15,7 +15,7 @@ import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 
 public class ItemDAO implements Dao<Item> {
-
+	//ItemDAO.java
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	@Override

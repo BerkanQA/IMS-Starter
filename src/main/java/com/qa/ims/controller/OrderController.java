@@ -12,7 +12,7 @@ import com.qa.ims.persistence.domain.Order;
 import com.qa.ims.utils.Utils;
 
 public class OrderController implements CrudController<Order> {
-	
+	//OrderController.java
 	public static final Logger LOGGER = LogManager.getLogger();
 	
 	private OrderDAO orderDAO;
@@ -37,7 +37,7 @@ public class OrderController implements CrudController<Order> {
 	public Order create() {
 		LOGGER.info("Please enter an Order ID ");
 		Long orderID = utils.getLong();
-		LOGGER.info("Please enter a surname");
+		LOGGER.info("Please enter a item ID");
 		Long itemID = utils.getLong();
 		LOGGER.info("Please enter a customer ID");
 		Long customerID = utils.getLong();

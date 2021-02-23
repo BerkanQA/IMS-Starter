@@ -1,7 +1,7 @@
 package com.qa.ims.persistence.domain;
 
 public class Item {
-
+	//Items.Java
 	private Long itemId;
 	private String itemName;
 	private Float itemPrice;
