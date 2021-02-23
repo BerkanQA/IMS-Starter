@@ -53,7 +53,7 @@ public class ItemController implements CrudController<Item> {
 	}
 
 	/**
-	 * Updates an existing customer by taking in user input
+	 * Updates existing item by taking user input
 	 */
 	@Override
 	public Item update() {
