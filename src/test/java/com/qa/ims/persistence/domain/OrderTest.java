@@ -3,7 +3,7 @@ package com.qa.ims.persistence.domain;
 import org.junit.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
-
+//Order Test
 public class OrderTest {
 	@Test
 	public void testEquals() {
