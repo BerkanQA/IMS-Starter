@@ -1,68 +1,50 @@
-Coverage: 34%
-# Project Title
+Coverage: 64.1%
 
-One Paragraph of project description goes here
+Inventory Management System
+
+A system built for my client to Manage Customers, Items and Orders in the system. User can create, read, update and delete customers, items and orders in the system. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The program will start with 'What entities would you like to use?' and from there you can choose Customer, Item, Order. You can start the program by typing in entity name you would like to edit and once it's done you can type 'READ' to see if the correct data is added to the system. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Java 1.8 MySQL Server Version
+Mysql Server 5.7
 
 ### Installing
+Open command line and follow the commands below:
 
-A step by step series of examples that tell you how to get a development env running
+Mkdir IMS
 
-Say what the step will be
+cd IMS
 
-```
-Give the example
-```
+git clone https://github.com/BerkanQA/IMS-Starter.git
 
-And repeat
+cd IMS-Starter
 
-```
-until finished
-```
+mvn package
 
-End with an example of getting some data out of the system or using it for a little demo
+cd target
+
+java -jar ims-0.0.1-jar-with-dependencies
+
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+git clone https://github.com/BerkanQA/IMS-Starter.git
+
+cd IMS-Starter
+
+mvn package
+
+mvn test
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+Unit Test can be runned by using mvn test and it will show how many tests has run and which has failed and has errors.
 
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -75,7 +57,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
-
+* **Berkan Irice** - *Completed application* [BerkanQA]https://github.com/BerkanQA/IMS-Starter
 ## License
 
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
@@ -84,6 +66,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* I would like to thank Jordan Harrison for creating and sharing the source code to run up the application
+* I would like to thank Edward Reynolds for the help provided throughout the project 
