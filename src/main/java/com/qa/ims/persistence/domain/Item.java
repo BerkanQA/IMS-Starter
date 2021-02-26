@@ -1,7 +1,7 @@
 package com.qa.ims.persistence.domain;
 
 public class Item {
-	//Items.Java
+	// Items.Java
 	private Long itemId;
 	private String itemName;
 	private Double itemPrice;
@@ -11,7 +11,7 @@ public class Item {
 		this.setItemPrice(itemPrice);
 	}
 
-	public Item(Long itemID, String itemName, Double itemPrice) {
+	public Item(Long itemId, String itemName, Double itemPrice) {
 		this.setItemId(itemId);
 		this.setItemName(itemName);
 		this.setItemPrice(itemPrice);
@@ -20,28 +20,32 @@ public class Item {
 	public Long getItemId() {
 		return itemId;
 	}
+
 	public void setItemId(Long itemId) {
 		this.itemId = itemId;
 	}
-	
+
 	public String getItemName() {
 		return itemName;
 	}
+
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
+
 	public Double getItemPrice() {
 		return itemPrice;
 	}
+
 	public void setItemPrice(Double itemPrice) {
 		this.itemPrice = itemPrice;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Id:" + itemId + "Item Name:" + itemName + " Price:" + itemPrice;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -51,7 +55,7 @@ public class Item {
 		result = prime * result + ((itemPrice == null) ? 0 : itemPrice.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -78,5 +82,5 @@ public class Item {
 			return false;
 		return true;
 	}
-	
+
 }
