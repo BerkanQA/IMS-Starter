@@ -52,4 +52,9 @@ public class Utils {
 		return doubleInput;
 	}
 
+	public float getfloat() {
+		// TODO Auto-generated method stub
+		return scanner.nextInt();
+	}
+
 }
